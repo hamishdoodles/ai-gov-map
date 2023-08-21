@@ -22,7 +22,7 @@ const svg = d3.select('#grid')
 
 // Add background image
 svg.append('image')
-  .attr('xlink:href', '/background.png')
+  .attr('xlink:href', 'background.png')
   .attr('x', xOffset)
   .attr('y', 0)
   .attr('width', 60 * gridSize)
@@ -78,7 +78,7 @@ grid();
 
 
 // Read CSV data and place a red square at the grid coordinates
-d3.csv('https://docs.google.com/spreadsheets/d/16CjyorSwrzVsMXtdHecuu-C6HWVYqjJbgwG0p3ZFlWg/export?format=csv&gid=1371825706&single=true&output=csv')
+d3.csv('https://docs.google.com/spreadsheets/d/1z0-5zz4DG9zxZkbSEsss0XmEHhrbKd7YCA54eBPDPQw/export?format=csv&gid=0&single=true&output=csv')
   .then(data => {
     data.forEach(drawSquare);
     setMapItemOrigins();
